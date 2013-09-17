@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h2>JSF Basic TAGS</h2>
+        <br/><br/>
+        <h:form>
+             
+            <table border="1">
+                <tr>
+                    <th align="left">HTML EQ</th>       
+                    <th align="left">JSF TAG</th>
+                    <th align="left">EXAMPLE</th>
+                </tr>
+                <tr>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                </tr>
+              
+                <tr>
+                    <td>type=button</td>
+                    <td>h:commandButton</td>
+                    <td><h:commandButton action="home?faces-redirect=true" value="commandButton"/></td>
+                </tr>
+                <tr>
+                    <td>A-href</td>
+                    <td>h:commandLink</td>
+                    <td><h:commandLink action="home?faces-redirect=true" value="commandLink" /></td>
+                </tr>
+                <tr>
+                    <td>anchor</td>
+                    <td>h:link</td>
+                    <td><h:link id="linkId" value="www.google.com" target="_blank" >link</h:link></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>h:outputFormat</td>
+                    <td><h:outputFormat id="oFormatId" value="outputFormat 000 000" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>h:outputLabel</td>
+                    <td><h:outputLabel id="oLableId" value="outputLabel" /></td>
+                </tr>
+                <tr>
+                    <td>text</td>
+                    <td>h:outputText</td>
+                    <td><h:outputText id="oTextId" value="outputText"  /></td>
+                </tr>
+                <tr>
+                    <td>ou</td>
+                    <td>h:message</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>type=text</td>
+                    <td>h:inputText</td>
+                    <td><h:inputText id="inputId" label="inputLabel" maxlength="5" required="true" value="default" /></td>
+                </tr>
+                <tr>
+                    <td>type=password</td>
+                    <td>h:inputSecret</td>
+                    <td><h:inputSecret id="secretId" label="secretLabel" maxlength="10" tabindex="2" /></td>
+                </tr>
+                <tr>
+                    <td>type=textArea</td>
+                    <td>h:inputTextArea</td>
+                    <td><h:inputTextarea id="textAreaId" label="textAreaLabel" title="textAreaTitle" /></td>
+                </tr>    
+                <tr>
+                    <td>type=hidden</td>
+                    <td>h:inputHidden</td>
+                    <td><h:inputHidden id="heddenId" value="hidden" rendered="true" /></td>
+                </tr>
+               <tr>
+                    <td>check box</td>
+                    <td>h:selectBooleanCheckbox</td>
+                    <td>
+                        <h:selectBooleanCheckbox id="checkBoxId" label="checkBoxL" value="true" />Remember Me
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>c BoxeS</td>
+                    <td>h:selectManyCheckbox</td>
+                    <td>
+                        <h:selectManyCheckbox id="checkBoxesId" label="manyCheckBoxes" value="3" >
+                            <f:selectItem itemLabel="checkOne" itemValue="1" />
+                            <f:selectItem itemLabel="checkTwo" itemValue="2" />
+                            <f:selectItem itemLabel="checkThree" itemValue="3" />
+                            <f:selectItem itemLabel="checkFour" itemValue="4" />
+                        </h:selectManyCheckbox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>listBox</td>
+                    <td>h:selectOneListbox</td>
+                    <td>
+                        <h:selectOneListbox id="listBoxOne" label="listBoxOne" value="r" >
+                            <f:selectItems value="#{selectGenerator.colorMap}" />
+                        </h:selectOneListbox></td>
+                </tr>
+                <tr>
+                    <td>multi ListBox</td>
+                    <td>h:selectManyListbox</td>
+                    <td>
+                        <h:selectManyListbox id="listBoxMany" label="listBoxMany" value="e" >
+                            <f:selectItems value="#{selectGenerator.coffeeMap}" />
+                        </h:selectManyListbox> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>combo box</td>
+                    <td>h:selectOneMenu</td>
+                    <td>
+                        <h:selectOneMenu id="selectMenuOne" label="selectMenuOne" value="menuB" >
+                            <f:selectItem itemLabel="menuA" itemValue="a" />
+                            <f:selectItem itemLabel="menuB" itemValue="b" />
+                            <f:selectItem itemLabel="menuC" itemValue="c" />
+                            <f:selectItem itemLabel="menuD" itemValue="d" />
+                        </h:selectOneMenu>
+                            
+                    
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>h:selectManyMenu</td>
+                    <td><h:selectManyMenu id="selectMenuMany" label="selectMenuMany" value="#{selectGenerator.defaultCoffee}">
+                            <f:selectItems value="#{selectGenerator.coffeeMap}" />
+                        </h:selectManyMenu>
+                    </td>
+                </tr>
+                <tr>
+                    <td>radio button</td>
+                    <td>h:selectOneRadio</td>
+                    <td>
+                        <h:selectOneRadio id="radioBoxOne" label="radioBoxOne" value="a">
+                            <f:selectItem itemLabel="apple" itemValue="a" />
+                            <f:selectItem itemLabel="banana" itemValue="b" />
+                            <f:selectItem itemLabel="mango" itemValue="m" />
+                            <f:selectItem itemLabel="plum" itemValue="p" />
+                        </h:selectOneRadio>
+                        <b/>
+                        <h:selectOneRadio id="radioBoxOneB" label="radioBoxOneB" value="#{selectGenerator.defaultC}">
+                            <f:selectItems value="#{selectGenerator.colorMap}" />
+                        </h:selectOneRadio>
+                    </td>
+                </tr>
+                                
+            </table>
+            <br/><br/>
+            <h:commandButton value="Submit" action="htmlTagResult" />
+            <h:commandButton value="Reset" type="reset" />
+        </h:form>
+        
+    </h:body>
+</html>
+
